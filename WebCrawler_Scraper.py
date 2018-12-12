@@ -58,7 +58,7 @@ def cleanData( page,year ):
 def writeCsv( data, year ):
     df = pd.DataFrame(data)
     df.columns = ['pos', 'birth', 'time']
-    path="C:\\Users\\Wiljam\\Documents\\"+year+".csv"
+    path="Yout Path"+year+".csv"
     df.to_csv(path,index=False)
     print("complete")
 
@@ -74,7 +74,7 @@ def Main( year ):
     writeCsv(data,year)
 
 #ohjelmaa aletaan suorittamaan täältä. Loopilla käydään kaikki vuodet läpi menemällä aina Main() funktioon
-driver = webdriver.Firefox(executable_path='C:\geckodriver\geckodriver.exe')
+driver = webdriver.Firefox(executable_path='gecko driverin path')
 driver.get("http://www.octoopen.fi/index.php?r=Result")
 choices=["2017","2016","2015","2014","2013"]
 for year in choices:
